@@ -1,0 +1,313 @@
+/*custom properties*/
+:root{
+    --fuentePrincipal: 'Open Sans', sans-serif;
+    /* --fuenteSecundaria: 'Raleway', sans-serif; */
+    --azulFuerte: #0059aa;
+    --negroOscuro: rgb(5, 1, 2);
+    --rojo: rgb(180, 3, 3);
+    --rojo-Oscuro: rgb(107, 19, 19);
+    --verde: rgb(74, 219, 74);
+    --amarillo: #d80;
+    --azulTransparente: #cff;
+    --negro: #eee;
+    --separacion: 5rem;
+    --grisOscuro: #444040;
+}
+
+/*globales*/
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    line-height: 1.8;
+    background-color: var(--grisOscuro);
+}
+
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3.4rem;
+}
+
+h3{
+    font-size: 2.8rem;
+}
+
+h1,h2,h3{
+    font-weight: 700;
+    /* font-family: var(--fuenteSecundaria); */
+    margin: calc(var(--separacion)/2) 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* [class$="__contenedor"]{
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+} */
+
+/* LISTA*/
+
+.lista, .crud{
+    width: 40rem;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    column-gap: 5rem;
+}
+
+/*TODAS LAS CLASES QUE TERMINAN CON _titulo*/
+[class$="__titulo"]{
+    font-size: 2.6rem;
+    color: var(--negroOscuro);
+    font-weight: 900;
+    text-align: center;
+}
+
+.lista__contenedor{
+    width: 100%;
+}
+
+.lista__contenido{
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.lista__enlaces{
+    display: flex;
+    padding: 1rem 2rem;
+    column-gap: 4rem;
+    height: 25rem;
+    width: 80%;
+    background-color: #fff;
+}
+
+.lista__mostrar{
+    width: 100%;
+    /* height: 5rem; */
+    text-align: center;
+    /* background-color: #fff; */
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    color: #000;
+}
+
+.lista__mostrar::placeholder{
+    color: #000;
+}
+
+.lista__formCheck{
+    display: flex;
+    column-gap: 1rem;
+    color: #0059aa;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.lista__fechaVencimiento{
+    margin: 0;
+    color: #3a3;
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+
+.lista__update{
+    width: 10rem;
+    height: 5rem;
+    font-size: 1rem;
+    background-color: var(--amarillo);
+    color: #fff;
+    text-align: center;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    border-radius: 5px;
+}
+
+.lista__update:hover{
+    background-color: rgb(241, 153, 9);
+    cursor: pointer;
+}
+
+.lista__delete{
+    width: 10rem;
+    height: 5rem;
+    font-size: 1rem;
+    background-color: var(--rojo);
+    color: #fff;
+    text-align: center;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    border-radius: 5px;
+}
+
+.lista__delete:hover{
+    background-color: #f34;
+    cursor: pointer;
+}
+
+.lista__botones{
+    display: flex;
+    gap: 1rem;
+    width: 20rem;
+}
+
+/* CRUD*/
+
+.crud__create{
+    height: 20rem;
+}
+
+.crud__opciones{
+    width: 40rem;
+    margin-top: 3.3rem;
+    text-transform: uppercase;
+}
+
+.crud__categoria{
+    color: #000;
+    font-weight: 700;
+}
+
+.crud__checkbox-trabajo{
+    color: blue;
+}
+
+.crud__checkbox-personal{
+    color: green;
+}
+
+.crud__checkbox-urgente{
+    color: red;
+}
+
+.crud__buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    column-gap: 5rem;
+}
+
+.crud__form{
+    border: none;
+    width: 40rem;
+    height: 5rem;
+    padding: 1rem;
+}
+
+.crud__form::placeholder{
+    color: #000;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.crud__vencimiento{
+    padding: 1rem 0 0 0;
+}
+
+.crud__label{
+    color: #3a3;
+    font-weight: 700;
+}
+
+.crud__button{
+    width: 12rem;
+    height: 5rem;
+    /* margin-top: 2rem;
+    margin-left: 10rem; */
+    border: none;
+    background-color: var(--verde);
+    color: #fff;
+    font-weight: 900;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    border-radius: 5px;
+}
+
+.crud__button:hover{
+    background-color: #0f0;
+    cursor: pointer;
+}
+
+
+.crud__erase{
+    width: 12rem;
+    height: 5rem;
+    /* margin-top: 2rem;
+    margin-left: 10rem; */
+    border: none;
+    background-color: var(--rojo-Oscuro);
+    color: #fff;
+    font-weight: 900;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    border-radius: 5px;
+}
+
+.crud__erase:hover{
+    background-color: rgb(177, 33, 45);
+    cursor: pointer;
+}
+
+
+/*ESTILOS GENERADOS POR JS*/
+.error{
+    background-color: var(--naranja);
+    color: var(--azulTransparente);
+    padding: 1rem 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+
+.lista__agrupada{
+    margin-top: 0rem;
+    background-color: var(--negro);
+    padding: 1rem 5rem;
+    margin-top: 1rem;
+    /* border-bottom: 1px solid #eee; */
+    width: 30rem;
+}
+
+.lista__agrupada:nth-last-of-type(){
+    border-bottom: none;
+}

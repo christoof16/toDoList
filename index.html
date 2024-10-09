@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Color Change</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .color-trabajo {
+            color: blue;
+        }
+        .color-personal {
+            color: green;
+        }
+        .color-urgente {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="lista">
+            <p class="lista__titulo">To Do list</p>
+            <div class="lista__contenedor">
+                <div class="lista__contenido"></div>
+            </div>
+        </div>
+        <div class="crud">
+            <p class="crud__titulo">Write your list</p>
+            <div class="crud__opciones">
+                <form class="crud__create">
+                    <input class="crud__form" type="text" placeholder="write your task">
+
+                    <div class="crud__vencimiento">
+                        <label class="crud__label" for="start">Due Date</label>
+                        <input type="date" id="start" name="crud__tiempo" class="crud__tiempo">
+                    </div>
+
+                    <div class="crud__checkbox">
+                        <p class="crud__categoria">Select the category</p>
+                        <div class="crud__checkbox-trabajo">
+                            <label for="trabajo">work</label>
+                            <input id="trabajo" type="radio" name="tipo" value="trabajo">
+                        </div>
+                        <div class="crud__checkbox-personal">
+                            <label for="personal">Personal</label>
+                            <input id="personal" type="radio" name="tipo" value="personal">
+                        </div>
+                        <div class="crud__checkbox-urgente">
+                            <label for="urgente">Urgent</label>
+                            <input id="urgente" type="radio" name="tipo" value="urgente">
+                        </div>
+                    </div>
+                    <div class="crud__buttons">
+                        <button class="crud__button">Send <i class="fa-solid fa-check"></i></button>
+                        <button class="crud__erase">Erase all <i class="fa-solid fa-skull"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="filtro">
+            <p class="filtro__titulo">tasks completed</p>
+            <div class="filtro__tareasCompletadas"></div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/c8773a5fc0.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
